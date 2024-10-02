@@ -1,26 +1,22 @@
-# WeatherApp
+# Overview
+This project utilizes the APJOY-WeatherForecast API, a robust and precise weather forecasting solution designed to deliver localized weather data and insights. By integrating this API, the application provides users with accurate, real-time weather information tailored to their specific needs.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
+Installation: Clone this repository and install the necessary dependencies.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+git clone <repository-url>
+cd <project-directory>
+npm install
+```
 
-## Running unit tests
+Run `ng serve` for a dev server. Navigate to `http://localhost:*/`. The application will automatically reload if you change any of the source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Features
+Real-time Weather Data: The application fetches the latest weather conditions, including temperature, humidity, wind speed, wind direction, and precipitation. This ensures users can make informed decisions based on current weather conditions.
+User-Friendly Interface: The application presents weather data in an intuitive layout, making it easy for users to access and understand the information.
 
 ## Further help
 
