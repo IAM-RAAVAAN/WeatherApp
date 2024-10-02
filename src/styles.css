@@ -1,1 +1,190 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --blue-1: #3c429e;
+    --blue-2: #4c52ad;
+    --yellow-1: #fac742;
+    --white: #FFF;
+    --grey-1: #EDEDED;
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --shadow-light: rgba(255, 255, 0, 0.1);
+    --font-size-base: 1rem; /* Base font size */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Georgia, 'Times New Roman', Times, serif;
+    font-size: var(--font-size-base);
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw; /* Adjusted to fit better on various screens */
+    max-width: 500px; /* Maximum width for larger screens */
+    height: auto; /* Allow the height to adjust based on content */
+    background-color: var(--blue-2);
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px var(--shadow-light);
+    overflow: hidden;
+}
+
+.upper-data {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh; /* Ensure a minimum height */
+}
+
+.upper-data img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weather-data {
+    position: absolute;
+    width: 100%;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.location {
+    color: var(--white);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.temperature {
+    color: var(--white);
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lower-data {
+    flex: 1;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.more-info-container {
+    color: var(--white);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em; /* Consistent padding */
+    border-bottom: 1px solid var(--grey-1);
+    background-color: var(--blue-2);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+}
+
+.info-block-label {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.info-block-label img {
+    width: 1em;
+    margin-right: 0.5em;
+}
+
+.info-block-label span {
+    color: var(--white);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.info-block-label span:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.info-block-value {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 0.2em;
+    margin-right: 1em;
+    background-color: var(--blue-1);
+    border-radius: 10px;
+    border: 2px solid var(--yellow-1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.info-block-value:hover {
+    transform: scale(1.05);
+    background-color: var(--yellow-1);
+    color: var(--blue-2);
+}
+
+.wind-info {
+  display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: flex-end; /* Align items to the right */
+    margin-left: 3em;
+/* Add padding */ /* Semi-transparent background */
+
+}
+
+.wind-speed, .wind-direction {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 1em;
+    margin-left: 1em;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.wind-direction {
+    font-style: italic; /* Italic style for direction */
+    margin-left: 1em;
+}
+
+/* Optional: Hover effects for both elements */
+.wind-speed:hover, .wind-direction:hover {
+   transform: scale(1.05);
+    background-color: var(--yellow-1);
+    color: var(--blue-2);/* Change text color on hover for contrast */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90vw; /* Adjust for smaller screens */
+    }
+    .location {
+        font-size: 1.2em; /* Adjust for smaller screens */
+    }
+    .temperature {
+        font-size: 2.5em; /* Adjust for smaller screens */
+    }
+}
