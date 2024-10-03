@@ -1,3 +1,9 @@
+<div class="search">
+    <form>
+        <input type="text" placeholder="Search..." autocomplete="off">
+    </form>
+</div>
+
 <div class="container" *ngIf = "weatherData">
     <div class="upper-data">
         <img src="../assets/hotWeather.webp" *ngIf="weatherData.current.temp_c > 15">

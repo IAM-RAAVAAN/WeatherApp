@@ -36,6 +36,7 @@ body {
     border-radius: 30px;
     box-shadow: 10px 10px 10px var(--shadow-light);
     overflow: hidden;
+    position: relative;
 }
 
 .upper-data {
@@ -187,4 +188,25 @@ body {
     .temperature {
         font-size: 2.5em; /* Adjust for smaller screens */
     }
+}
+
+
+.search {
+position: absolute; /* Keep this line */
+    right: 1em; /* Position it to the right */
+    top: 50%; /* Center vertically */
+    left: 70%;
+    transform: translateY(-50%); 
+    width: 25%; /* Adjust width as needed */
+}
+.search input {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--blue-1);
+    font-size: 0.9em;
+    width: 100%; /* Make the input fill the search container */
+
 }
