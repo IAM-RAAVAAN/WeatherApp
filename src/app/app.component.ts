@@ -18,6 +18,12 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent implements OnInit {
   constructor(private weatherService:WeatherService){}
   
+  selectedUnits: { temp: 'C' | 'F'; wind: 'kph' | 'mph'; distance: 'km' | 'm' } = {
+    temp: 'C',    // Temperature in Celsius by default
+    wind: 'kph',  // Wind in kilometers per hour by default
+    distance: 'km' // Visibility in kilometers by default
+  };
+
   cityName: string = 'Seattle'
   weatherData?: WeatherData
   ngOnInit(): void {
@@ -32,6 +38,10 @@ export class AppComponent implements OnInit {
       this.getWeatherData(this.cityName);
       this.cityName = "";
 
+  }
+
+   toggleUnits(temp: 'C' | 'F', wind: 'kph' | 'mph', distance: 'km' | 'm'): void {
+    this.selectedUnits = { temp, wind, distance };
   }
 
   private getWeatherData(cityName:string){

@@ -5,7 +5,7 @@
     --white: #FFF;
     --grey-1: #EDEDED;
     --shadow-dark: rgba(0, 0, 0, 0.2);
-    --shadow-light: rgba(255, 255, 0, 0.1);
+    --shadow-light: rgba(255, 255, 0, 0.066);
     --font-size-base: 1rem; /* Base font size */
 }
 
@@ -202,10 +202,24 @@ width: 90%; /* Adjust as needed */
     border: none;
     border-radius: 20px;
     padding: 1em;
-    color: var(--blue-1);
+    color: var(--white);
     font-size: 0.9em;
     width: 100%; /* Make the input fill the search container */
+}
 
+/* Responsive styling for the input */
+@media (max-width: 768px) {
+  .search-input {
+    padding: 8px 15px; /* Slightly smaller padding for smaller screens */
+    font-size: 14px; /* Slightly smaller font size for mobile devices */
+    border-radius: 20px;  /* Smaller border-radius for smaller devices */
+  }
+}
+
+/* Placeholder text styling */
+.search-input::placeholder {
+  color: #999; /* Light grey placeholder */
+  opacity: 1; /* Ensure the placeholder is fully visible */
 }
 
 .enclosure {
@@ -233,4 +247,42 @@ width: 90%; /* Adjust as needed */
 .github-link a:hover {
     text-decoration: underline; /* Underline on hover */
     color: #0056b3; /* Darker color on hover */
+}
+
+/* Styling for the unit toggle container */
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Space above the buttons */
+  gap: 15px; /* Space between the buttons */
+}
+
+.unit-button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  padding: 12px 24px; /* Add padding for a larger clickable area */
+  border: none;
+  border-radius: 30px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.unit-button:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.unit-button.active {
+  background-color: #004085; /* Darker blue for active button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for active button */
+}
+
+.unit-button:focus {
+  outline: none; /* Remove the default outline */
+  border: 2px solid #0056b3; /* Add a border when the button is focused */
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Outline effect on focus */
 }
