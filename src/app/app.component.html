@@ -25,7 +25,9 @@
           <img src="../assets/precipitation.png" alt="">
           <span>Precipitation</span>
         </div>
-        <div class="info-block-value">{{ weatherData.current.precip_mm }} mm</div>
+        <div class="info-block-value">{{ selectedUnits.temp === 'C' ? weatherData.current.precip_mm: weatherData.current.precip_in }}  
+            {{ selectedUnits.temp === 'C' ? 'mm' : 'in'}}
+        </div>
       </div>
 
       <!-- Visibility Block -->
@@ -46,7 +48,9 @@
           <img src="../assets/pressure.png" alt="">
           <span>Pressure</span>
         </div>
-        <div class="info-block-value">{{ weatherData.current.pressure_mb }} mb</div>
+        <div class="info-block-value">{{ selectedUnits.distance === 'km' ? weatherData.current.pressure_mb : weatherData.current.pressure_in }} 
+            {{ selectedUnits.distance === 'km' ? 'mb' : 'in' }}
+        </div>
       </div>
 
       <!-- Humidity Block -->
