@@ -1,6 +1,6 @@
 <div class="search">
-    <form>
-        <input type="text" placeholder="Search..." autocomplete="off">
+    <form #form="ngForm" (submit) = "onSubmit()">
+        <input type="text" placeholder="Search..." name="city" [(ngModel)]="cityName">
     </form>
 </div>
 
