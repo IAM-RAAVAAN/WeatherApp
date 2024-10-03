@@ -192,12 +192,8 @@ body {
 
 
 .search {
-position: absolute; /* Keep this line */
-    right: 1em; /* Position it to the right */
-    top: 50%; /* Center vertically */
-    left: 70%;
-    transform: translateY(-50%); 
-    width: 25%; /* Adjust width as needed */
+width: 90%; /* Adjust as needed */
+    margin-bottom: 1em;
 }
 .search input {
     background-color: var(--shadow-light);
@@ -209,4 +205,11 @@ position: absolute; /* Keep this line */
     font-size: 0.9em;
     width: 100%; /* Make the input fill the search container */
 
+}
+
+.enclosure {
+    display: flex;
+    flex-direction: column; /* Stack the search and container vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%; /* Full width */
 }
