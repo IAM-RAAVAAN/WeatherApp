@@ -2,7 +2,7 @@
 
 <div class="search">
     <form #form="ngForm" (submit) = "onSubmit()">
-        <input type="text" placeholder="Search..." name="city" [(ngModel)]="cityName">
+        <input type="text" placeholder="Search for cities ex... Seattle" name="city" [(ngModel)]="cityName">
     </form>
 </div>
 
@@ -69,8 +69,11 @@
 
 
     </div>
+    <div class="github-link">
+        <a href="https://github.com/IAM-RAAVAAN/WeatherApp/tree/master" target="_blank">My GitHub</a>
+    </div>
 </div>
-</div>
+
 <router-outlet></router-outlet>
 
 

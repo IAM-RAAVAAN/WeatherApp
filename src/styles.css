@@ -213,3 +213,23 @@ width: 90%; /* Adjust as needed */
     align-items: center; /* Center horizontally */
     width: 100%; /* Full width */
 }
+
+.github-link {
+    text-align: center; /* Center the link */
+    margin-top: 20px; /* Space above the link */
+    padding: 10px; /* Add padding */
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.github-link a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Increase font size */
+}
+
+.github-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker color on hover */
+}

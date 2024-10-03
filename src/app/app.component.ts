@@ -21,10 +21,14 @@ export class AppComponent implements OnInit {
   cityName: string = 'Seattle'
   weatherData?: WeatherData
   ngOnInit(): void {
+    console.log('ngOnInit called');
     this.getWeatherData(this.cityName);
+    this.cityName = ""
+    
   }
 
   onSubmit(): void {
+      console.log('Form submitted with city:', this.cityName);
       this.getWeatherData(this.cityName);
       this.cityName = "";
 
@@ -35,7 +39,7 @@ export class AppComponent implements OnInit {
     .subscribe({
       next: (responce: any) =>{
         this.weatherData = responce;
-        console.log(responce)
+        console.log(responce,cityName)
       }
   });
   }
