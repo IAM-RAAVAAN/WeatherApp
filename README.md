@@ -12,7 +12,7 @@ cd <project-directory>
 npm install
 ```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:*/`. The application automatically reloads whenever you modify any source files. It is deployed on [Vercel](https://vercel.com), and I am utilizing [WeatherAPI](https://rapidapi.com/weatherapi/api/weatherapi-com) to provide real-time information.
+Run `ng serve` for a dev server. Navigate to `http://localhost:*/`. The application automatically reloads whenever you modify any source files. It is deployed on [Vercel](https://vercel.com),[MyWebsite](https://weather-app-weld-alpha.vercel.app/), and I am utilizing [WeatherAPI](https://rapidapi.com/weatherapi/api/weatherapi-com) to provide real-time information.
 
 ## Features
 Real-time Weather Data: The application fetches the latest weather conditions, including temperature, humidity, wind speed, wind direction, and precipitation. This ensures users can make informed decisions based on current weather conditions.
